@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nancy's Cheatsheet</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+      <header>
+        <h1>Welcome to my HTML Cheatsheet</h1>
+      </header>
+      <nav>
+        <h2>Topics</h2>
+         <a href="#basics">HTML Basics</a><br>
+         <a href="#tables">HTML Tables</a><br>
+         <a href="#semantics">Semantic HTML</a>
+      </nav>
+
+      <main>
+        <section id="basics">
+          <p>~ Let's start with some basic HTML ~</p>
+        </section>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" colspan="4">HTML Basics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="top">
+              <th>Name</th>
+              <th>Syntax</th>
+              <th>Purpose</th>
+              <th>Notes</th>
+            </tr>
+            <tr>
+              <td class="name">Opening</td>
+              <td>&lt;!DOCTYPE html&gt;</td>
+              <td>To let the browser know what language is used</td>
+              <td>Should be the first line of an HTML doc</td>
+            </tr>
+            <tr>
+              <td class="name">Making a comment</td>
+              <td>&lt;!--Comment--&gt;</td>
+              <td>To write notes in code for you or other people to read</td>
+              <td>This will not display on your site, it is grey text in your code</td>
+            </tr>
+            <tr>
+              <td class="name">Title</td>
+              <td>&lt;title&gt;<br>&lt;/title&gt;</td>
+              <td>Creates a title in the tab of the browser</td>
+              <td>Can only be used between &lt;head&gt; and &lt;/head&gt;</td>
+            </tr>
+            <tr>
+              <td class="name">Division</td>
+              <td>&lt;div&gt;</td>
+              <td>Divides page into sections</td>
+              <td>Can be styles using class or id attribute</td>
+            </tr>
+            <tr>
+              <td class="name">Link</td>
+              <td>&lt;a href="url"&gt;Link text&lt;/a&gt;</td>
+              <td>Creates a link</td>
+              <td>Use target="_blank" attribute to link to a new window</td>
+            </tr>
+            <tr>
+              <td class="name">Linking to relative page</td>
+              <td>&lt;a href="./file"&gt;link text&lt;/a&gt;</td>
+              <td>Will go to said file in the same folder</td>
+              <td>Uses relative path to create a multi-page site</td>
+            </tr>
+            <tr>
+              <td class="name">Linking to same page</td>
+              <td>&lt;a href="#IDtag"&gt;Link text&lt;/a&gt;</td>
+              <td>Used to link to a specific are on the page</td>
+              <td>Add id to sections</td>
+            </tr>
+            <tr>
+              <td class="name">Image with description</td>
+              <td>&lt;img src="url" alt="image description"&gt;</td>
+              <td>Provides image with a description incase it doesnt load</td>
+              <td>Have to add a description</td>
+            </tr>
+            <tr>
+              <td class="name">Image link</td>
+              <td>&lt;a href="url"&gt; &lt;img src="img url"&gt;&lt;/a&gt;</td>
+              <td>Used to make an image a link</td>
+              <td>Image tag must be inside anchor tag</td>
+            </tr>
+          </tbody>
+        </table> <br>
+        
+        <section id="tables">
+          <p>~ Here are some basic table elements ~</p>
+        </section>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" colspan="4">Tables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="top">
+              <th>Name</th>
+              <th>Syntax</th>
+              <th>Purpose</th>
+              <th>Notes</th>
+            </tr>
+            <tr>
+              <td class="name">Table Head</td>
+              <td>&lt;thead&gt;</td>
+              <td>The set of rows defining the column headers</td>
+              <td>Column headings section off</td>
+            </tr>
+            <tr>
+              <td class="name">Table Body</td>
+              <td>&lt;tbody&gt;</td>
+              <td>The set of rows containing the data</td>
+              <td>Excludes table headings</td>
+            </tr>
+            <tr>
+              <td class="name">Table Footer</td>
+              <td>&lt;tfoot&gt;</td>
+              <td>The set of rows defining the footer</td>
+              <td>Bottom of table can be sectioned off</td>
+            </tr>
+            <tr>
+              <td class="name">Tables Rows</td>
+              <td>&lt;tr&gt;</td>
+              <td>Creates rows</td>
+              <td>Will not display anything without &lt;td&gt;</td>
+            </tr>
+            <tr>
+              <td class="name">Table Data</td>
+              <td>&lt;td&gt;</td>
+              <td>Contains the data of a cell</td>
+              <td>Add colspan/rowspan attribute for data to cover more than one cell</td>
+            </tr>
+          </tbody>
+        </table> <br>
+
+        <section id="semantics">
+          <P>~ Here are some semantic HTML tags ~</P>
+        </section>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" colspan="4">Semantic HTML</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="top">
+              <th>Name</th>
+              <th>Syntax</th>
+              <th>Purpose</th>
+              <th>Notes</th>
+            </tr>
+            <tr>
+              <td class="name">Article</td>
+              <td>&lt;article&gt;</td>
+              <td>Represents a self-contained piece of content within a document</td>
+              <td>Doesnt display as anything special in browser, but helpul for css styling</td>          
+            </tr>
+            <tr>
+              <td class="name">Aside</td>
+              <td>&lt;aside&gt;</td>
+              <td>Defines content aside from the page content</td>
+              <td>Typically used for sidebars, pull quotes, advertisements</td>
+            </tr>
+            <tr>
+              <td class="name">Details</td>
+              <td>&lt;details&gt;</td>
+              <td>Specifies additional content that user can open and close on demand</td>
+              <td>&lt;summary&gt; is used in conjunction with details to specify a visible heading for the details</td>
+            </tr>
+            <tr>
+              <td class="name">Figcaption</td>
+              <td>&lt;figcaption&gt;</td>
+              <td>Defines thecaption for a &lt;figure&gt; element</td>
+              <td>Can be placed as first or last child of &lt;figure&gt;</td>
+            </tr>
+            <tr>
+              <td class="name">Figure</td>
+              <td>&lt;figure&gt;</td>
+              <td>Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc</td>
+              <td>The figure, its caption, and its contents are refeenced as a single unit</td>
+            </tr>
+            <tr>
+              <td class="name">Mark</td>
+              <td>&lt;mark&gt;</td>
+              <td>Used to highlight/mark portions of text within the content</td>
+              <td>Typically rendered with a background colour to distinguish marked text</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+
+
+
+    </body>
+</html>
